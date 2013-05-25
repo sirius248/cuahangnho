@@ -1,11 +1,26 @@
 
+<div class="profile">
+
 <% if @user.avatar == nil %>
 	<%= image_tag('ninja.png', :size => '140x140', :class => "img-polaroid") %>
 <% end %>
 
 <br/>
-<h3><%= @user.name %></h3>
-<p><b>Email:</b> <%= @user.email %></p>
-<p><b>Twitter:</b> <%= @user.twitter %></p>
-<p><b>Github:</b> <%= @user.github %></p>
+<h3><%=  @user.name %></h3>
 
+<p><b>Email:</b> <%= @user.email %></p>
+
+<% if signed_in? && current_user.id == @user.id %>
+
+	<p><b>Twitter:</b> <%= best_in_place @user, :twitter ,:type => :input, :nil => "click vào để cập nhập" %></p>
+
+	<p><b>Github:</b> <%= best_in_place @user, :github, :type => :input, :nil => "click vào để cập nhập" %></p>
+
+<% else %>
+
+	<p><b>Twitter: </b><%= @user.twitter %></p>
+	<p><b>Github:</b> <%= @user.github %></p>
+
+<% end  %>
+
+</div>
