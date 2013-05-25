@@ -1,4 +1,4 @@
-
+<% cache "user_profile" do %>
 
 <% if @user.avatar == nil %>
 	<%= image_tag('ninja.png', :size => '140x140', :class => "img-polaroid") %>
@@ -9,3 +9,5 @@
 <p><b>Email:</b> <%= @user.email %></p>
 <p><b>Twitter:</b> <%= @user.twitter %></p>
 <p><b>Github:</b> <%= @user.github %></p>
+
+<% end %>

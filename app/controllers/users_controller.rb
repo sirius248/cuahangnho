@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+	# caches_page :notexist, :show
+
 	before_filter :find_user, :only => [:show, :edit, :update, :destroy]
 
 	def new
