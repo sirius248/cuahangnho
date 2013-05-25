@@ -1,0 +1,11 @@
+<h1>Đăng Nhập</h1>
+
+<%= form_for(:session) do |f| %>
+	<%= f.label "Email" %>	
+	<%= f.text_field :email %>
+
+	<%= f.label "Mật Khẩu" %>
+	<%= f.password_field :password %> <br/>
+
+	<%= f.submit "Đăng Nhập", :class => "btn" %>
+<% end %>

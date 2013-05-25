@@ -1,0 +1,24 @@
+<%= form_for(@user) do |f| %>
+	
+	<% if @user.errors.any?  %>
+		<% @user.errors.full_messages.each do |e| %>
+			* <%= e %> <br/>
+		<% end %>
+	<% end %>
+
+	<br/>
+
+	<%= f.label "Username" %>
+	<%= f.text_field :name %>
+
+	<%= f.label "Email" %>
+	<%= f.text_field :email %>
+
+	<%= f.label "Mật Khẩu" %>
+	<%= f.password_field :password %>
+
+	<%= f.label "Xác Nhận Lại Mật Khẩu" %>
+	<%= f.password_field :password_confirmation %><br/>
+
+	<%= f.submit "Tạo Tài Khoản", :class => "btn" %>
+<% end %>

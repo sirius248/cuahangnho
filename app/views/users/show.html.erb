@@ -1,0 +1,11 @@
+
+
+<% if @user.avatar == nil %>
+	<%= image_tag('ninja.png', :size => '140x140', :class => "img-polaroid") %>
+<% end %>
+
+<br/>
+<h3><%= @user.name %></h3>
+<p><b>Email:</b> <%= @user.email %></p>
+<p><b>Twitter:</b> <%= @user.twitter %></p>
+<p><b>Github:</b> <%= @user.github %></p>
