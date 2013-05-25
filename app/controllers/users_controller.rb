@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
 	# caches_page :notexist, :show
 
+
 	before_filter :find_user, :only => [:show, :edit, :update, :destroy]
+	skip_before_filter :verify_authenticity_token
 
 	def new
 		@user = User.new
@@ -33,7 +35,6 @@ class UsersController < ApplicationController
 	def find_user
 		begin
 			@user = User.find_by_slug!(params[:id])
-			fresh_when :etag => @user
 		rescue
 			render 'notexist'
 		end

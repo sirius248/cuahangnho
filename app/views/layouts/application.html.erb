@@ -8,16 +8,11 @@
 </head>
 <body>
 
-<% cache do  %>
 <div class="navbar">
   <div class="navbar-inner">
-    <%= link_to image_tag('logo.png', :size => "25x25") + " Vietnamese Rubyists Community", root_url, :class => "brand" %>
+    <%= link_to image_tag('logo.png', :size => "25x25") + " Kiosk", root_url, :class => "brand" %>
     
-    <div>
-      <form class="navbar-search pull-left">
-        <input type="text" class="search-query" placeholder="tìm kiếm">
-      </form>
-    </div>
+ 
     
     <div class="login_logout">
     	<ul class="nav">
@@ -34,18 +29,16 @@
   </div>
 </div>
 
-<% end %>
-
 
 <div class="container">
 
 
 	<% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+    <div class="alert alert-success"><%= flash[:notice] %></div>
  <% end %>
 
  <% if flash[:error] %>
-    <div class="error"><%= flash[:error] %></div>
+    <div class="alert alert-error"><%= flash[:error] %></div>
  <% end %>
 
 
