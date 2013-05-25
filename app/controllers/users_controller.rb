@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 	def find_user
 		begin
 			@user = User.find_by_slug!(params[:id])
+			fresh_when :etag => @user
 		rescue
 			render 'notexist'
 		end
