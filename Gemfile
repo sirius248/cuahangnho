@@ -15,7 +15,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'best_in_place', github: 'bernat/best_in_place'
-gem 'newrelic_rpm'
+
+
 
 group :doc do
   gem 'sdoc', require: false
@@ -33,6 +34,7 @@ end
 
 group :production do
 	gem 'pg'
+	gem 'newrelic_rpm'
 end
 
 

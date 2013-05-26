@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hm9nb26oo
+  api_key: '359294864452223'
+  api_secret: T1XSa19BZMNKbrEAxT0wZPlxLPk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hm9nb26oo
+  api_key: '359294864452223'
+  api_secret: T1XSa19BZMNKbrEAxT0wZPlxLPk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hm9nb26oo
+  api_key: '359294864452223'
+  api_secret: T1XSa19BZMNKbrEAxT0wZPlxLPk
+  enhance_image_tag: true
+  static_image_support: false
