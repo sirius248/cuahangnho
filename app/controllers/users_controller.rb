@@ -31,6 +31,7 @@ class UsersController < ApplicationController
 		params.permit!
 		@user.update_attributes(params[:user])
   	respond_with @user
+  	
 	end
 
 	private

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require best_in_place
 //= require best_in_place.purr
+//=	require file-input
 //= require angular
 //= require angular-resource
 //= require twitter/bootstrap
