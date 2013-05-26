@@ -55,6 +55,8 @@ GEM
     commonjs (0.2.6)
     daemons (1.1.9)
     debug_inspector (0.0.2)
+    dropbox-sdk (1.5.1)
+      json
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -164,6 +166,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  dropbox-sdk
   jbuilder (~> 1.0.1)
   jquery-rails
   less-rails

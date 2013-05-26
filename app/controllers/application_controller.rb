@@ -1,3 +1,4 @@
+
 class ApplicationController < ActionController::Base
   include ActionController::Caching
   # Prevent CSRF attacks by raising an exception.
@@ -13,4 +14,15 @@ class ApplicationController < ActionController::Base
   def signed_in?
     !current_user.nil?
   end
+
+  def dropbox_session
+    dbsession = DropboxSession.new(APP_KEY, APP_SECRET)
+    dbsession.get_request_token
+    authorize_url = dbsession.get_authorize_url(action: 'dropbox_callback')
+  end
+
+  def dropbox_callback
+    
+  end
+
 end
