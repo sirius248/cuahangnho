@@ -17,7 +17,6 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'best_in_place', github: 'bernat/best_in_place'
 
 gem "paperclip"
-gem 'aws-sdk'
 
 gem 'protected_attributes'
 
