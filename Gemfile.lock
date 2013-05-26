@@ -36,10 +36,6 @@ GEM
     angularjs-rails (1.0.6)
     arel (4.0.0)
     atomic (1.1.9)
-    aws-sdk (1.10.0)
-      json (~> 1.4)
-      nokogiri (>= 1.4.4)
-      uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -92,7 +88,6 @@ GEM
     minitest (4.7.4)
     multi_json (1.7.3)
     newrelic_rpm (3.6.2.96)
-    nokogiri (1.5.9)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -170,14 +165,12 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   angularjs-rails
-  aws-sdk
   bcrypt-ruby (~> 3.0.0)
   best_in_place!
   better_errors
