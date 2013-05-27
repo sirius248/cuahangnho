@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
+	validates :name, :presence => true, :uniqueness => true
+	validates :email, :presence => true, :uniqueness => true
 
-	attr_accessible :avatar
+	attr_accessible :avatar, :name, :email, :password, :password_confirmation
 
 	has_secure_password
 
@@ -13,9 +15,7 @@ class User < ActiveRecord::Base
 	before_save :create_remember_token
 	before_validation :generate_slug
 
-	validates :name, :presence => true, :uniqueness => true
-
-	validates :email, :presence => true, :uniqueness => true
+	
 	validates :slug, :presence => true, :uniqueness => true
 
 	def to_param

@@ -1,6 +1,9 @@
-<h1>Đăng Nhập</h1>
+<div class="dangnhap">
+
 
 <%= form_for(:session) do |f| %>
+	<fieldset>
+	<legend>Đăng Nhập</legend>
 	<%= f.label "Email" %>	
 	<%= f.text_field :email %>
 
@@ -8,5 +11,8 @@
 	<%= f.password_field :password %> <br/>
 
 	<%= f.submit "Đăng Nhập", :class => "btn" %>
+
+	</fieldset>
 <% end %>
 
+</div>

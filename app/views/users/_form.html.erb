@@ -1,3 +1,7 @@
+<div class="dangky">
+
+
+
 <%= form_for(@user) do |f| %>
 	
 	<% if @user.errors.any?  %>
@@ -8,7 +12,9 @@
 
 	<br/>
 
-	<%= f.label "Username" %>
+	<fieldset>
+	<legend>Đăng Ký</legend>
+	<%= f.label "Tên shop" %>
 	<%= f.text_field :name %>
 
 	<%= f.label "Email" %>
@@ -20,5 +26,10 @@
 	<%= f.label "Xác Nhận Lại Mật Khẩu" %>
 	<%= f.password_field :password_confirmation %><br/>
 
-	<%= f.submit "Tạo Tài Khoản", :class => "btn" %>
+	<%= f.submit "Tạo Cửa Hàng", :class => "btn" %>
+
+	</fieldset>
 <% end %>
+
+
+</div>
