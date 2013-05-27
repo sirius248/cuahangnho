@@ -13,14 +13,6 @@
   &:first-letter { text-transform: uppercase; }
 }
 
-.profile{
-	border-right: 1px solid #CCCCCC;
-	padding: 3px;
-	width:250px;
-	margin-bottom: 10px;
-}
-
-
 .dangky{
   width: 250px;
   border: 1px solid #E5E5E5;
@@ -38,3 +30,29 @@ border-top-right-radius:5px;
 border-bottom-left-radius:5px;
 border-bottom-right-radius:5px;
 }
+
+.profile{
+	border-right: 1px solid #CCCCCC;
+	padding: 3px;
+  margin-right:4px;
+	width:250px;
+	margin-bottom: 10px;
+  float:left;
+}
+
+body{
+  background-color:white;
+}
+
+
+.cacsanpham{
+  margin-left:30px;
+  border: 1px solid #CCCCCC;
+  width:700;
+  height:500px;
+}
+
+
+
+
+
