@@ -15,16 +15,16 @@
 	<fieldset>
 	<legend>Đăng Ký</legend>
 	<%= f.label "Tên shop" %>
-	<%= f.text_field :name %>
+	<div class="input-append"><%= f.text_field :name %><span class="add-on"><i class="icon-user"></i></span></div>
 
 	<%= f.label "Email" %>
-	<%= f.text_field :email %>
+	<div class="input-append"><%= f.text_field :email %><span class="add-on"><i class="icon-envelope"></i></span></div>
 
 	<%= f.label "Mật Khẩu" %>
-	<%= f.password_field :password %>
+	<div class="input-append"><%= f.password_field :password %><span class="add-on"><i class="icon-barcode"></i></span></div>
 
 	<%= f.label "Xác Nhận Lại Mật Khẩu" %>
-	<%= f.password_field :password_confirmation %><br/>
+	<div class="input-append"><%= f.password_field :password_confirmation %><span class="add-on"><i class="icon-barcode"></i></span></div><br/>
 
 	<%= f.submit "Tạo Cửa Hàng", :class => "btn" %>
 
