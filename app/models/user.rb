@@ -21,7 +21,6 @@ class User < ActiveRecord::Base
 	def to_param
 		slug
 	end
-	
 
 	private
 

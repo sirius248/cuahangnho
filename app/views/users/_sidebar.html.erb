@@ -1,4 +1,5 @@
-<% if !@user.avatar.exists? %>
+	
+		<% if !@user.avatar.exists? %>
 			<%= image_tag('ninja.png', :size => '144x144', :class => "img-polaroid") %>
 		<% else %>
 			<%= image_tag @user.avatar.url, :size => '144x144', :class => "img-polaroid" %>
@@ -21,3 +22,18 @@
 		<h3><%=  @user.name %></h3>
 
 		<p><b>Email:</b> <%= @user.email %></p>
+
+		<% cache ['v1', 'setting'] do %>
+
+		<a id="simple-menu" href="#sidr"><button class="btn">Setting</button></a>
+ 
+		<div id="sidr">
+		  <!-- Your content -->
+		  <ul>
+		    <li><a href="#">List 1</a></li>
+		    <li class="active"><a href="#">List 2</a></li>
+		    <li><a href="#">List 3</a></li>
+		  </ul>
+		</div>
+
+		<% end %>

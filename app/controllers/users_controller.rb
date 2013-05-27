@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
+		fresh_when(:etag => @user)
 	end
 
 	def notexist
@@ -29,9 +30,8 @@ class UsersController < ApplicationController
 
 	def update
 		params.permit!
-		@user.update_attributes(params[:user])
+		@user.update_attributes(params[:user]) 
   	respond_with @user
-  	
 	end
 
 	private

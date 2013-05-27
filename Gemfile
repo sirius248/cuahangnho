@@ -17,10 +17,13 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'best_in_place', github: 'bernat/best_in_place'
 
 gem "paperclip"
+gem 'sidekiq'
 
 gem 'protected_attributes'
 
 gem 'fog'
+
+gem 'dalli'
 
 group :doc do
   gem 'sdoc', require: false

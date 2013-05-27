@@ -1,11 +1,10 @@
-<% @title = "| "+@user.name.capitalize + " Shop"%>
+	<% @title = "| "+@user.name.capitalize + " Shop"%>
 
-<div class="span2">
-		<div class="profile">
-		<%= render 'sidebar' %>
-		</div>
-</div>
-
+	<div class="span2">
+			<div class="profile">
+			<%= render 'sidebar' %>
+			</div>
+	</div>
 
 <div class="span10" ng-app="LitleShop">
 	<div class="cacsanpham" ng-controller="AllProductCtrl">
@@ -18,18 +17,6 @@
 			</li>
 		</ul>
 
-
-
-		<a id="simple-menu" href="#sidr"><button class="btn">Setting</button></a>
- 
-		<div id="sidr">
-		  <!-- Your content -->
-		  <ul>
-		    <li><a href="#">List 1</a></li>
-		    <li class="active"><a href="#">List 2</a></li>
-		    <li><a href="#">List 3</a></li>
-		  </ul>
-		</div>
 
 
 	</div>

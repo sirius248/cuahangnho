@@ -1,18 +1,19 @@
-<div class="dangnhap">
+	<div class="dangnhap">
 
 
-<%= form_for(:session) do |f| %>
-	<fieldset>
-	<legend>Đăng Nhập</legend>
-	<%= f.label "Email" %>	
-	<div class="input-append"><%= f.text_field :email %><span class="add-on"><i class="icon-envelope"></i></span></div>
+	<%= form_for(:session) do |f| %>
+		<fieldset>
+		<legend>Đăng Nhập</legend>
+		<%= f.label "Email" %>	
+		<div class="input-append"><%= f.text_field :email %><span class="add-on"><i class="icon-envelope"></i></span></div>
 
-	<%= f.label "Mật Khẩu" %>
-	<div class="input-append"><%= f.password_field :password %> <span class="add-on"><i class="icon-barcode"></i></span></div>
+		<%= f.label "Mật Khẩu" %>
+		<div class="input-append"><%= f.password_field :password %> <span class="add-on"><i class="icon-barcode"></i></span></div>
 
-	<%= f.submit "Đăng Nhập", :class => "btn" %>
+		<%= f.submit "Đăng Nhập", :class => "btn" %>
 
-	</fieldset>
-<% end %>
+		</fieldset>
+	<% end %>
 
-</div>
+	</div>
+
