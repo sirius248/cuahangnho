@@ -20,6 +20,8 @@ gem "paperclip"
 
 gem 'protected_attributes'
 
+gem 'fog'
+
 group :doc do
   gem 'sdoc', require: false
 end

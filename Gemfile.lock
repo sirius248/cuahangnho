@@ -61,8 +61,20 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.22.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fog (1.11.1)
+      builder
+      excon (~> 0.20)
+      formatador (~> 0.2.0)
+      json (~> 1.7)
+      mime-types
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.4)
     hike (1.2.2)
     i18n (0.6.4)
     jbuilder (1.0.2)
@@ -87,7 +99,11 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.3)
+    net-scp (1.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.7)
     newrelic_rpm (3.6.2.96)
+    nokogiri (1.5.9)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -122,6 +138,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
+    ruby-hmac (0.4.0)
     sass (3.2.9)
     sass-rails (4.0.0.rc1)
       railties (>= 4.0.0.beta, < 5.0)
@@ -176,6 +193,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  fog
   jbuilder (~> 1.0.1)
   jquery-rails
   less-rails
