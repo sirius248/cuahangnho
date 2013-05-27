@@ -1,0 +1,23 @@
+<% if !@user.avatar.exists? %>
+			<%= image_tag('ninja.png', :size => '144x144', :class => "img-polaroid") %>
+		<% else %>
+			<%= image_tag @user.avatar.url, :size => '144x144', :class => "img-polaroid" %>
+		<% end %>
+
+
+		<br/>
+		<% if signed_in? && current_user.id == @user.id %>
+
+			<%= form_for @user, :html => { :multipart => true } do |form|%>
+			  <%= form.file_field :avatar, :title=>"Chọn Avatar Khác", :class => 'btn btn-link btn-mini' %>
+			  <br/>
+			  &nbsp;
+			  <%= form.button "Update", :class => 'btn btn-mini btn-info' %>
+			<% end %>
+
+		<% end %>
+
+		<hr/>
+		<h3><%=  @user.name %></h3>
+
+		<p><b>Email:</b> <%= @user.email %></p>
