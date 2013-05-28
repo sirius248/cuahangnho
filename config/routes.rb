@@ -6,6 +6,7 @@ Rubyists::Application.routes.draw do
   post 'signin' => "sessions#create"
   get 'logout' => "sessions#destroy"
 
+ 
   root "main#index"
 
   resources :users, only: [:index, :new, :create]
