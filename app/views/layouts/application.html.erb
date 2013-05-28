@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>Little Shop <%= @title %></title>
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <% cache ['v1', 'asset']  do %>
+     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+   <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
