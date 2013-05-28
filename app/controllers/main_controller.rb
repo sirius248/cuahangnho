@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
   def index
-  	if signed_in?
+  	if current_user 
   		redirect_to user_path(current_user)
   	else
   		redirect_to signup_path

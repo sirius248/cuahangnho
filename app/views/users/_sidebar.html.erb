@@ -23,16 +23,17 @@
 
 		<p><b>Email:</b> <%= @user.email %></p>
 
-		<% cache ['v1', 'setting'] do %>
+		<% cache ['v3', 'setting'] do %>
 
 		<a id="simple-menu" href="#sidr"><button class="btn">Setting</button></a>
  
 		<div id="sidr">
 		  <!-- Your content -->
 		  <ul>
-		    <li><a href="#">List 1</a></li>
-		    <li class="active"><a href="#">List 2</a></li>
-		    <li><a href="#">List 3</a></li>
+		    <li><a href="#">Security</a></li>
+		    <li class="active"><a href="#">Messages</a></li>
+		    <li><a href="#">About</a></li>
+		    <li><%= link_to "Homepage", root_url %></li>
 		  </ul>
 		</div>
 

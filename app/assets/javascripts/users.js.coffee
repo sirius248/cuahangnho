@@ -4,6 +4,7 @@
 
 jQuery ->
   $('.best_in_place').best_in_place()
+  $('#simple-menu').sidr();
 
 
 #######
