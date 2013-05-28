@@ -23,6 +23,7 @@ gem 'protected_attributes'
 gem 'fog'
 
 gem 'dalli'
+gem 'rack-cache'
 
 group :doc do
   gem 'sdoc', require: false

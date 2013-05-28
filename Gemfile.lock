@@ -119,6 +119,8 @@ GEM
     puma (2.0.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
     rack-mini-profiler (0.1.26)
@@ -212,6 +214,7 @@ DEPENDENCIES
   pg
   protected_attributes
   puma
+  rack-cache
   rack-mini-profiler
   rails (= 4.0.0.rc1)
   sass-rails (~> 4.0.0.rc1)
