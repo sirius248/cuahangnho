@@ -1,4 +1,6 @@
 
+
+
 <div class="dangky">
 
 
@@ -13,26 +15,27 @@
 
 	<br/>
 
+<% cache ['v1', 'dangky'] do %>
+			<fieldset>
+			<legend>Đăng Ký</legend>
+			<%= f.label "Tên shop" %>
+			<div class="input-append"><%= f.text_field :name %><span class="add-on"><i class="icon-home"></i></span></div>
 
-	<fieldset>
-	<legend>Đăng Ký</legend>
-	<%= f.label "Tên shop" %>
-	<div class="input-append"><%= f.text_field :name %><span class="add-on"><i class="icon-home"></i></span></div>
+			<%= f.label "Email" %>
+			<div class="input-append"><%= f.text_field :email %><span class="add-on"><i class="icon-envelope"></i></span></div>
 
-	<%= f.label "Email" %>
-	<div class="input-append"><%= f.text_field :email %><span class="add-on"><i class="icon-envelope"></i></span></div>
+			<%= f.label "Mật Khẩu" %>
+			<div class="input-append"><%= f.password_field :password %><span class="add-on"><i class="icon-barcode"></i></span></div>
 
-	<%= f.label "Mật Khẩu" %>
-	<div class="input-append"><%= f.password_field :password %><span class="add-on"><i class="icon-barcode"></i></span></div>
+			<%= f.label "Xác Nhận Lại Mật Khẩu" %>
+			<div class="input-append"><%= f.password_field :password_confirmation %><span class="add-on"><i class="icon-barcode"></i></span></div><br/>
 
-	<%= f.label "Xác Nhận Lại Mật Khẩu" %>
-	<div class="input-append"><%= f.password_field :password_confirmation %><span class="add-on"><i class="icon-barcode"></i></span></div><br/>
+			<%= f.submit "Tạo Cửa Hàng", :class => "btn" %>
 
-	<%= f.submit "Tạo Cửa Hàng", :class => "btn" %>
-
-	</fieldset>
-
+			</fieldset>
+<% end %>
 
 </div>
 
 <% end %>
+

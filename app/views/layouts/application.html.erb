@@ -11,9 +11,12 @@
 
 <div class="navbar">
   <div class="navbar-inner">
-    <%= link_to image_tag('logo.png', :size => "30x30") + " LittleShop", root_url, :class => "brand" %>
+
+    <% cache ['v1', 'logo'] do %>
+
+      <%= link_to image_tag('logo.png', :size => "30x30") + " LittleShop", root_url, :class => "brand" %>
     
- 
+    <% end %>
     
     <div class="login_logout">
     	<ul class="nav">
