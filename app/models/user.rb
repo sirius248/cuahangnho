@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
-	validates :name, :presence => true, :uniqueness => true
-	validates :email, :presence => true, :uniqueness => true
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	validates :name, :presence => true, :uniqueness => true, format: { with: /^[a-zA-Z0-9_]+$/, message: 'Tên Không Đúng', :multiline => true}
+	validates :email, :presence => true, :uniqueness => true, format: { with: VALID_EMAIL_REGEX }
+	validates :password, :presence => true, length: {minimum: 6}
+	validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif'], :message => 'file must be image'
 
 	attr_accessible :avatar, :name, :email, :password, :password_confirmation
 
@@ -9,14 +12,12 @@ class User < ActiveRecord::Base
 	has_attached_file :avatar, :styles => {
 		:medium => "300x300>", 
 		:thumb => "100x100>"
-	}, :default_url => "/ninja.png", :content_type => { :content_type => "image/*" }
+	}, :default_url => "/ninja.png", :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
 	before_save { self.email = email.downcase }
 	before_save :create_remember_token
 	before_validation :generate_slug
 
-	
-	validates :slug, :presence => true, :uniqueness => true
 
 	def to_param
 		slug

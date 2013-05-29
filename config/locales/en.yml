@@ -19,5 +19,28 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+en:  
+  activerecord:
+    models: 
+      user: "Customer"
+    attributes:
+      user:
+        email: "Email"
+        name: "Tên shop"
+        password: "Mật khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "không được bỏ chống"
+              taken: "đã tồn tại"
+              invalid: 'không đúng mẫu'
+            name:
+              blank: "không được bỏ chống"
+              taken: "đã tồn tại"
+              invalid: "không đúng mẫu"
+            password:
+             blank: "không được bỏ chống"
+             too_short: 'phải hơn 8 ký tự'
+

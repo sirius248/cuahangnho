@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 			flash[:notice] = "Đăng nhập thành công."
 			redirect_to user_path(user) 
 		else
-			flash[:error] = 'Email không tồn tại / Sai mật khẩu' 
+			flash[:error] = 'Email không tồn tại / Hoặc sai mật khẩu' 
       render 'new'
 		end
 

@@ -24,8 +24,8 @@
 	    			<li><%=  link_to "#{current_user.email}", user_path(current_user) %></li>
 	    			<li><%= link_to "Thoát", logout_path %></li>
 	    	<% else %>
-		    		<li><%= link_to "Đăng Ký", signup_path %></li>
-		    		<li><%= link_to "Đăng Nhập", signin_path %></li>
+		    		<li><%= link_to "Đăng Ký", signup_path, id: 'dangky' %></li>
+		    		<li><%= link_to "Đăng Nhập", signin_path, id: 'dangnhap' %></li>
 		    <% end %>
 	    </ul>
     </div>
