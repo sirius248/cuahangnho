@@ -18,5 +18,6 @@
 //= require angular
 //= require angular-resource
 //= require twitter/bootstrap
+//= require bootstrap-wysihtml5
 //= require_tree .
 

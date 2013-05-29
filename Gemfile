@@ -24,6 +24,8 @@ gem 'fog'
 
 gem 'dalli'
 
+gem 'bootstrap-wysihtml5-rails'
+
 
 group :doc do
   gem 'sdoc', require: false
