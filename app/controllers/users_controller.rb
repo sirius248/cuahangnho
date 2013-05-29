@@ -31,11 +31,11 @@ class UsersController < ApplicationController
 	def update
 		params.permit!
 		begin
-			@user.update_attributes(params[:user])
+			@user.update_columns(params[:user])
 			respond_with @user
 		rescue
-			flash[:notice] = "file mus be image"
-			redirect_to 'show'
+
+			respond_with @user
 		end
 	end
 

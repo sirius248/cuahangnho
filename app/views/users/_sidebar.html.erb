@@ -23,6 +23,21 @@
 
 		<p><b>Email:</b> <%= @user.email %></p>
 
+		<% if signed_in? && current_user.id == @user.id %>
+			<p><b>Chủ cửa hàng:</b> <%= best_in_place @user, :owner, :type => :input %> </p>
+			<p><b>Facebook:</b> <%= best_in_place @user, :facebook, :type => :input, :nil => "Click để cập nhập" %> </p>
+			<p><b>Địa chỉ:</b> <%= best_in_place @user, :address, :type => :input, :nil => "Click để cập nhập" %> </p>
+			<p><b>Về cửa hàng:</b> <%= best_in_place @user, :description, :type => :textarea, :nil => "Click để cập nhập" %> </p>
+			<p><b>Điện thoại:</b> <%= best_in_place @user, :phone, :type => :input, :nil => "Click để cập nhập" %> </p>
+
+		<% else %>
+			<p><b>Chủ cửa hàng:</b> <%= @user.owner %></p>
+			<p><b>Facebook:</b> <%= @user.facebook %></p>
+			<p><b>Địa chỉ:</b> <%= @user.address %></p>
+			<p><b>Về cửa hàng:</b> <%= @user.description %></p>
+			<p><b>Điện thoại:</b> <%= @user.phone %></p>
+		<% end %>
+
 		<% cache ['v3', 'setting'] do %>
 
 		<a id="simple-menu" href="#sidr"><button class="btn">Setting</button></a>
