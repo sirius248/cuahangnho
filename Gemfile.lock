@@ -62,7 +62,6 @@ GEM
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
     connection_pool (1.0.0)
-    dalli (2.6.3)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     excon (0.22.1)
@@ -204,7 +203,6 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-wysihtml5-rails
   coffee-rails (~> 4.0.0)
-  dalli
   fog
   jbuilder (~> 1.0.1)
   jquery-rails
@@ -217,6 +215,7 @@ DEPENDENCIES
   puma
   rack-mini-profiler
   rails (= 4.0.0.rc1)
+  redis
   sass-rails (~> 4.0.0.rc1)
   sdoc
   sidekiq

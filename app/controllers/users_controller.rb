@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-	# caches_page :notexist, :show
 	respond_to :html, :json
 
 	before_filter :find_user, :only => [:show, :edit, :update, :destroy]
@@ -21,12 +20,13 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		fresh_when(:etag => @user)
+
 	end
 
 	def notexist
 		
 	end
+
 
 	def update
 		params.permit!

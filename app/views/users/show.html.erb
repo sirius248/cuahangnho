@@ -1,19 +1,21 @@
 	<% @title = "| "+@user.name.capitalize + " Shop"%>
 
-	<div class="span2">
 			<div class="profile">
 			<%= render 'sidebar' %>
 			</div>
-	</div>
 
-<div class="span10" ng-app="LitleShop">
+<div ng-app="LitleShop">
 	<div class="cacsanpham" ng-controller="AllProductCtrl">
 
+		<div class="hangmoinhap">
+			<h4>Hàng mới nhập</h4>
+		</div>
 
-
+		<div class="cac_sanpham_khac">
+			<h4>Tất cả</h4>
+		</div>
 
 	</div>
-
 
 
 </div>

@@ -22,7 +22,9 @@ gem 'protected_attributes'
 
 gem 'fog'
 
-gem 'dalli'
+gem 'redis'
+
+
 
 gem 'bootstrap-wysihtml5-rails'
 

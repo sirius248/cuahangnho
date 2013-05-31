@@ -11,7 +11,7 @@ module Rubyists
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.cache_store = :dalli_store
+    config.cache_store = :memory_store
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
   "<div class=\"field_with_errors control-group error\">#{html_tag}</div>".html_safe
 }

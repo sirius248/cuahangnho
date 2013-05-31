@@ -1,6 +1,6 @@
 Rubyists::Application.routes.draw do
 
-
+  get 'users/msg'
   get 'signup' => "users#new", as: "signup"
   get 'signin' => "sessions#new", as: "signin"
   post 'signin' => "sessions#create"

@@ -7,6 +7,7 @@ jQuery ->
   $('#simple-menu').sidr();
 
 
+
 #######
 app = angular.module("LitleShop", ["ngResource"])
 
