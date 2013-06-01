@@ -9,7 +9,7 @@
 		<br/>
 		<% if signed_in? && current_user.id == @user.id %>
 
-			<%= form_for @user, :html => { :multipart => true } do |form|%>
+			<%= form_for @user, :html => { :multipart => true }, :url => {controller: 'users', action: 'update_avatar'} do |form|%>
 			  <%= form.file_field :avatar, :title=>"Chọn Avatar Khác", :class => 'btn btn-link btn-mini' %>
 			  <br/>
 			  
@@ -38,15 +38,15 @@
 			<p><b>Điện thoại:</b> <%= @user.phone %></p>
 		<% end %>
 
-		<% cache ['v3', 'setting'] do %>
+		<% cache ['v4', 'setting'] do %>
 
-		<a id="simple-menu" href="#sidr"><button class="btn">Setting</button></a>
+		<a id="simple-menu" href="#sidr"><button class="btn">Quản lý sản phẩm</button></a>
  
 		<div id="sidr">
 		  <!-- Your content -->
 		  <ul>
-		    <li><a href="#">Security</a></li>
-		    <li class="active"><a href="#">Messages</a></li>
+		    <li><a href="#">Thêm sản phẩm</a></li>
+		    <li><a href="#">Hòm thư</a></li>
 		    <li><a href="#">About</a></li>
 		    <li><%= link_to "Homepage", root_url %></li>
 		  </ul>

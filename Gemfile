@@ -24,7 +24,7 @@ gem 'fog'
 
 gem 'redis'
 
-
+gem 'dalli'
 
 gem 'bootstrap-wysihtml5-rails'
 
@@ -46,7 +46,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'newrelic_rpm'
-	gem 'dalli'
+	
 end
 
 

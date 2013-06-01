@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	validates :name, :presence => true, :uniqueness => true, format: { with: /^[a-zA-Z0-9_]+$/, message: 'Tên Không Đúng', :multiline => true}
 	validates :email, :presence => true, :uniqueness => true, format: { with: VALID_EMAIL_REGEX }
 	validates :password, :presence => true, length: {minimum: 6}
-	validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif'], :message => 'file must be image'
+
 
 	attr_accessible :avatar, :name, :email, :password, :password_confirmation
 

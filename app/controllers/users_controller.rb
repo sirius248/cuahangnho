@@ -27,16 +27,26 @@ class UsersController < ApplicationController
 		
 	end
 
+	def update_avatar
+		params.permit!
+		if current_user.update_attribute(:avatar, params[:user][:avatar])
+			redirect_to current_user
+		else
+			render text: "hadfhasdfa"
+		end
+	end
+
 
 	def update
 		params.permit!
-		begin
-			@user.update_columns(params[:user])
-			respond_with @user
-		rescue
-
-			respond_with @user
-		end
+		
+			begin
+				@user.update_columns(params[:user])
+				respond_with @user
+			rescue
+				respond_with @user
+			end
+		
 	end
 
 	private
