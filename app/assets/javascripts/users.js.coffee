@@ -4,7 +4,9 @@
 
 jQuery ->
   $('.best_in_place').best_in_place()
-  $('#simple-menu').sidr();
+  $('#simple-menu').sidr()
+  width = $(window).width()
+  $('.cacsanpham').width(width - 350)
 
 
 
